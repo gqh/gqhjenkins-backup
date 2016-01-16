@@ -1,0 +1,123 @@
+Started by GitHub push by gqh
+Building in workspace /var/lib/jenkins/jobs/DevOpsDemo/workspace
+ > /usr/bin/git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > /usr/bin/git config remote.origin.url https://github.com/gqh/DevOpsDemo.git # timeout=10
+Fetching upstream changes from https://github.com/gqh/DevOpsDemo.git
+ > /usr/bin/git --version # timeout=10
+ > /usr/bin/git -c core.askpass=true fetch --tags --progress https://github.com/gqh/DevOpsDemo.git +refs/heads/*:refs/remotes/origin/*
+ > /usr/bin/git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision dcc837756bd3111be2e7ff00e6f041279031b1c9 (refs/remotes/origin/master)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f dcc837756bd3111be2e7ff00e6f041279031b1c9
+ > /usr/bin/git rev-list a3969eb955497b605ceed8beeceb86cb9a6b7a7d # timeout=10
+Jenkins Artifactory Plugin version: 2.4.7
+Artifactory integration is disabled
+[workspace] $ java -classpath /usr/local/maven/boot/plexus-classworlds-2.5.2.jar -Dmaven.home=/usr/local/maven -Dclassworlds.conf=/usr/local/maven/bin/m2.conf -Dmaven.multiModuleProjectDirectory=/var/lib/jenkins/jobs/DevOpsDemo/workspace/pom.xml org.codehaus.plexus.classworlds.launcher.Launcher -f pom.xml install deploy
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building DevOpsDemo 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ DevOpsDemo ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/jobs/DevOpsDemo/workspace/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ DevOpsDemo ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to /var/lib/jenkins/jobs/DevOpsDemo/workspace/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ DevOpsDemo ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/jobs/DevOpsDemo/workspace/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ DevOpsDemo ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ DevOpsDemo ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ DevOpsDemo ---
+[INFO] Building jar: /var/lib/jenkins/jobs/DevOpsDemo/workspace/target/DevOpsDemo-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ DevOpsDemo ---
+[INFO] Installing /var/lib/jenkins/jobs/DevOpsDemo/workspace/target/DevOpsDemo-1.0-SNAPSHOT.jar to /var/lib/jenkins/.m2/repository/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-SNAPSHOT.jar
+[INFO] Installing /var/lib/jenkins/jobs/DevOpsDemo/workspace/pom.xml to /var/lib/jenkins/.m2/repository/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ DevOpsDemo ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/jobs/DevOpsDemo/workspace/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ DevOpsDemo ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ DevOpsDemo ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/jobs/DevOpsDemo/workspace/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ DevOpsDemo ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ DevOpsDemo ---
+[INFO] No tests to run.
+[INFO] Skipping execution of surefire because it has already been run for this configuration
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ DevOpsDemo ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ DevOpsDemo ---
+[INFO] Installing /var/lib/jenkins/jobs/DevOpsDemo/workspace/target/DevOpsDemo-1.0-SNAPSHOT.jar to /var/lib/jenkins/.m2/repository/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-SNAPSHOT.jar
+[INFO] Installing /var/lib/jenkins/jobs/DevOpsDemo/workspace/pom.xml to /var/lib/jenkins/.m2/repository/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.7:deploy (default-deploy) @ DevOpsDemo ---
+Downloading: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/maven-metadata.xml
+767/767 B               Downloaded: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/maven-metadata.xml (767 B at 5.2 KB/sec)
+Uploading: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-20160116.043808-3.jar
+2/4 KB      4/4 KB            Uploaded: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-20160116.043808-3.jar (4 KB at 28.8 KB/sec)
+Uploading: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-20160116.043808-3.pom
+2/3 KB   3/3 KB            Uploaded: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-20160116.043808-3.pom (3 KB at 35.8 KB/sec)
+Downloading: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/maven-metadata.xml
+281/281 B               Downloaded: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/maven-metadata.xml (281 B at 8.6 KB/sec)
+Uploading: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/maven-metadata.xml
+767/767 B               Uploaded: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/maven-metadata.xml (767 B at 20.2 KB/sec)
+Uploading: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/maven-metadata.xml
+281/281 B               Uploaded: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/maven-metadata.xml (281 B at 5.8 KB/sec)
+[INFO] 
+[INFO] --- nexus-staging-maven-plugin:1.5.1:deploy (default-deploy) @ DevOpsDemo ---
+[INFO] Performing deferred deploys (gathering into "/var/lib/jenkins/jobs/DevOpsDemo/workspace/target/nexus-staging/deferred")...
+[INFO] Installing /var/lib/jenkins/jobs/DevOpsDemo/workspace/target/DevOpsDemo-1.0-SNAPSHOT.jar to /var/lib/jenkins/jobs/DevOpsDemo/workspace/target/nexus-staging/deferred/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-20160116.043808-3.jar
+[INFO] Installing /var/lib/jenkins/jobs/DevOpsDemo/workspace/pom.xml to /var/lib/jenkins/jobs/DevOpsDemo/workspace/target/nexus-staging/deferred/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-20160116.043808-3.pom
+[INFO] Deploying remotely...
+[INFO] Bulk deploying locally gathered artifacts from directory: 
+[INFO]  * Bulk deploying locally gathered snapshot artifacts to URL http://localhost:8081/nexus/content/repositories/snapshots
+Downloading: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/maven-metadata.xml
+767/767 B               Downloaded: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/maven-metadata.xml (767 B at 25.8 KB/sec)
+Uploading: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-20160116.003834-1.jar
+2/4 KB      4/4 KB            Uploaded: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-20160116.003834-1.jar (4 KB at 31.4 KB/sec)
+Uploading: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-20160116.003834-1.pom
+2/3 KB   3/3 KB            Uploaded: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-20160116.003834-1.pom (3 KB at 22.0 KB/sec)
+Downloading: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/maven-metadata.xml
+281/281 B               Downloaded: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/maven-metadata.xml (281 B at 9.5 KB/sec)
+Uploading: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/maven-metadata.xml
+767/767 B               Uploaded: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/maven-metadata.xml (767 B at 10.4 KB/sec)
+Uploading: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/maven-metadata.xml
+281/281 B               Uploaded: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/maven-metadata.xml (281 B at 3.5 KB/sec)
+Uploading: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-20160116.043808-3.jar
+2/4 KB      4/4 KB            Uploaded: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-20160116.043808-3.jar (4 KB at 26.6 KB/sec)
+Uploading: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-20160116.043808-3.pom
+2/3 KB   3/3 KB            Uploaded: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-20160116.043808-3.pom (3 KB at 16.5 KB/sec)
+Uploading: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/maven-metadata.xml
+767/767 B               Uploaded: http://localhost:8081/nexus/content/repositories/snapshots/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/maven-metadata.xml (767 B at 11.9 KB/sec)
+[INFO]  * Bulk deploy of locally gathered snapshot artifacts finished.
+[INFO] Remote deploy finished with success.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.094 s
+[INFO] Finished at: 2016-01-16T04:38:10+00:00
+[INFO] Final Memory: 13M/31M
+[INFO] ------------------------------------------------------------------------
+Build step 'Invoke Maven 3' changed build result to SUCCESS
+Finished: SUCCESS

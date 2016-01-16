@@ -1,0 +1,9 @@
+Started on Jan 16, 2016 4:37:53 AM
+Using strategy: Default
+[poll] Last Built Revision: Revision a3969eb955497b605ceed8beeceb86cb9a6b7a7d (refs/remotes/origin/master)
+ > /usr/bin/git --version # timeout=10
+ > /usr/bin/git -c core.askpass=true ls-remote -h https://github.com/gqh/DevOpsDemo.git # timeout=10
+Found 1 remote heads on https://github.com/gqh/DevOpsDemo.git
+[poll] Latest remote head revision on refs/heads/master is: dcc837756bd3111be2e7ff00e6f041279031b1c9
+Done. Took 0.13 sec
+Changes found

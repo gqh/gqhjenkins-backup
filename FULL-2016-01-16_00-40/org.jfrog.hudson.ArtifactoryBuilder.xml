@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jfrog.hudson.ArtifactoryBuilder_-DescriptorImpl plugin="artifactory@2.4.7">
+  <useCredentialsPlugin>false</useCredentialsPlugin>
+</org.jfrog.hudson.ArtifactoryBuilder_-DescriptorImpl>

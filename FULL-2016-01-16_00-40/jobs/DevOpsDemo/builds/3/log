@@ -1,0 +1,78 @@
+Started by user [8mha:AAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL99MIMAMgxNqi+AAAA[0mgqh
+Building in workspace /var/lib/jenkins/jobs/DevOpsDemo/workspace
+ > /usr/bin/git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > /usr/bin/git config remote.origin.url https://github.com/gqh/DevOpsDemo.git # timeout=10
+Fetching upstream changes from https://github.com/gqh/DevOpsDemo.git
+ > /usr/bin/git --version # timeout=10
+ > /usr/bin/git -c core.askpass=true fetch --tags --progress https://github.com/gqh/DevOpsDemo.git +refs/heads/*:refs/remotes/origin/*
+ > /usr/bin/git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > /usr/bin/git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision a3969eb955497b605ceed8beeceb86cb9a6b7a7d (refs/remotes/origin/master)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f a3969eb955497b605ceed8beeceb86cb9a6b7a7d
+ > /usr/bin/git rev-list a3969eb955497b605ceed8beeceb86cb9a6b7a7d # timeout=10
+Jenkins Artifactory Plugin version: 2.4.7
+Artifactory integration is disabled
+[workspace] $ java -classpath /usr/local/maven/boot/plexus-classworlds-2.5.2.jar -Dmaven.home=/usr/local/maven -Dclassworlds.conf=/usr/local/maven/bin/m2.conf -Dmaven.multiModuleProjectDirectory=/var/lib/jenkins/jobs/DevOpsDemo/workspace/pom.xml org.codehaus.plexus.classworlds.launcher.Launcher -f pom.xml clean site install
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building DevOpsDemo 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ DevOpsDemo ---
+[INFO] Deleting /var/lib/jenkins/jobs/DevOpsDemo/workspace/target
+[INFO] 
+[INFO] --- maven-site-plugin:3.3:site (default-site) @ DevOpsDemo ---
+[WARNING] Report plugin org.apache.maven.plugins:maven-project-info-reports-plugin has an empty version.
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[INFO] configuring report plugin org.apache.maven.plugins:maven-project-info-reports-plugin:2.8.1
+[WARNING] No project URL defined - decoration links will not be relativized!
+[INFO] Rendering site with org.apache.maven.skins:maven-default-skin:jar:1.0 skin.
+[INFO] Generating "Dependency Convergence" report    --- maven-project-info-reports-plugin:2.8.1
+[INFO] Generating "Dependency Information" report    --- maven-project-info-reports-plugin:2.8.1
+[INFO] Generating "Distribution Management" report    --- maven-project-info-reports-plugin:2.8.1
+[INFO] Generating "About" report    --- maven-project-info-reports-plugin:2.8.1
+[INFO] Generating "Plugin Management" report    --- maven-project-info-reports-plugin:2.8.1
+[INFO] Generating "Project Plugins" report    --- maven-project-info-reports-plugin:2.8.1
+[INFO] Generating "Source Repository" report    --- maven-project-info-reports-plugin:2.8.1
+[INFO] Generating "Project Summary" report    --- maven-project-info-reports-plugin:2.8.1
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ DevOpsDemo ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/jobs/DevOpsDemo/workspace/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ DevOpsDemo ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to /var/lib/jenkins/jobs/DevOpsDemo/workspace/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ DevOpsDemo ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/jobs/DevOpsDemo/workspace/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ DevOpsDemo ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ DevOpsDemo ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ DevOpsDemo ---
+[INFO] Building jar: /var/lib/jenkins/jobs/DevOpsDemo/workspace/target/DevOpsDemo-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ DevOpsDemo ---
+[INFO] Installing /var/lib/jenkins/jobs/DevOpsDemo/workspace/target/DevOpsDemo-1.0-SNAPSHOT.jar to /var/lib/jenkins/.m2/repository/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-SNAPSHOT.jar
+[INFO] Installing /var/lib/jenkins/jobs/DevOpsDemo/workspace/pom.xml to /var/lib/jenkins/.m2/repository/com/java/demo/DevOpsDemo/1.0-SNAPSHOT/DevOpsDemo-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 12.084 s
+[INFO] Finished at: 2016-01-15T21:57:47+00:00
+[INFO] Final Memory: 19M/46M
+[INFO] ------------------------------------------------------------------------
+Build step 'Invoke Maven 3' changed build result to SUCCESS
+Finished: SUCCESS

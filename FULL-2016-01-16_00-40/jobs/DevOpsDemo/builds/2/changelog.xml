@@ -1,0 +1,23 @@
+commit a3969eb955497b605ceed8beeceb86cb9a6b7a7d
+tree aefc8210eae2b73948c85ec141643de57d979b58
+parent b1928d527bddb4938e865b5586792523da3375a4
+author gqh <cbsnyc2@gmail.com> 2016-01-15 15:19:46 -0500
+committer gqh <cbsnyc2@gmail.com> 2016-01-15 15:19:46 -0500
+
+    Update pom.xml
+
+    changed to jdk 8
+    /usr/lib/jvm/java-1.8.0-openjdk
+
+:100644 100644 c195f099579e5e5f997a6fef31754e9dbb189397 6860e152ceb735f8b7e0ffbde8c6c3462b42651b M	pom.xml
+commit b1928d527bddb4938e865b5586792523da3375a4
+tree 996e4987adc8dca7a7b4ebe0b66215bac8e2549c
+parent a98840ad9275e093cd188ad13de016f1c686254d
+author gqh <cbsnyc2@gmail.com> 2016-01-15 13:30:16 -0500
+committer gqh <cbsnyc2@gmail.com> 2016-01-15 13:30:16 -0500
+
+    Update pom.xml
+
+    ${java.home}
+
+:100644 100644 336d7f6b6e4ae68c68025d0d3cf9aa12a86410f8 c195f099579e5e5f997a6fef31754e9dbb189397 M	pom.xml
